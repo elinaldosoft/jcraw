@@ -19,7 +19,7 @@ class SpiderBase:
     def request(self, path: str, **kwargs) -> str:
         try:
             url = urljoin(self.url_base, path)
-            response = requests.get(url, headers={'User-Agent': random_agent()} ** kwargs)
+            response = requests.get(url, headers={'User-Agent': random_agent()}, **kwargs)
             response.raise_for_status()
             self.html = response.text
         except requests.exceptions.HTTPError as err:

@@ -8,7 +8,8 @@ ENV HOST 0.0.0.0
 ENV PORT 5000
 ENV DEBUG true
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y python3-dev
+RUN apt-get update && apt-get upgrade -y && apt-get autoremove && apt-get autoclean
+RUN apt-get install -y python3-dev
 RUN python -m pip install --upgrade pip
 
 WORKDIR /usr/src/app

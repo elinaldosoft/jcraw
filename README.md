@@ -35,7 +35,7 @@ Modo Production with Docker
 - `http://localhost:5000`
 
 ### Documentation
-- `http://localhost:5000/api/v1`
+- `http://localhost:5000/api/v1/docs`
 
 Some processes
 ----------------------

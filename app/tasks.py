@@ -13,3 +13,4 @@ def get_process(tribunal: str, number: str):
         db.hmset(number, {'data': json.dumps(rsp), 'updated_at': datetime.utcnow().timestamp(), 'status': 'ok'})
     except Exception as e:
         db.hmset(number, {'updated_at': datetime.utcnow().timestamp(), 'status': 'fail'})
+        raise e
